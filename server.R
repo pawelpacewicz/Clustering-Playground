@@ -68,14 +68,14 @@ shinyServer(function(input, output) {
       suppressWarnings({
         if (input$method == "kmeans")
           clusterID <-
-            kmeans(data, input$kmeans_centers)$cluster+1
+            kmeans(data, input$kmeans_centers)$cluster + 1
         if (input$method == "hclust") {
           if (input$hclust_hork == "hclust_byk")
             clusterID <-
-              cutree(hclust(dist(data)), k = input$hclust_k)+1
+              cutree(hclust(dist(data)), k = input$hclust_k) + 1
           if (input$hclust_hork == "hclust_byh")
             clusterID <-
-              cutree(hclust(dist(data)), h = input$hclust_h)+1
+              cutree(hclust(dist(data)), h = input$hclust_h) + 1
           if (input$hclust_hork == "hclust_hybrid")
             clusterID <-
               dynamicTreeCut::cutreeDynamic(hclust(dist(data)), distM = as.matrix(dist(data))) +

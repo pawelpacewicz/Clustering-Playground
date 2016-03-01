@@ -121,33 +121,79 @@ shinyUI(navbarPage(
   tabPanel(
     "Documentation",
     h1("overview"),
-    p("Application is a Playgroud for testing most clustering ethods in R."),
+    p(
+      "Application is a Playgroud for testing most clustering ethods in R."
+    ),
     h1("how to use"),
     p("Usage is split into 3 steps:"),
     h2("STEP 1 - Prepare the data"),
     p("Prepare data for clustering. Following options are available:"),
-    p(" - just click on plotting area to add points - or by screen touching on tablets and othern touchable screens"),
-    p(" - add bunch of random points using button 'add random points' (You can choose number of points to add using slider)"),
+    p(
+      " - just click on plotting area to add points - or by screen touching on tablets and othern touchable screens"
+    ),
+    p(
+      " - add bunch of random points using button 'add random points' (You can choose number of points to add using slider)"
+    ),
     p(" - if You need to clear points just press button 'clear points'"),
     h2("STEP 2 - Choose clustering method"),
     p("Choose one of possible clustering methods:"),
-    p(" - hierarchical clustering with", a(href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/hclust.html","hclust()")),
-    p(" - centroid clustering with", a(href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/kmeans.html","kmeans()")),
-    p(" - density clustering with", a(href="https://cran.r-project.org/web/packages/dbscan/index.html","dbscan()")),
+    p(
+      " - hierarchical clustering with",
+      a(href = "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/hclust.html", "hclust()")
+    ),
+    p(
+      " - centroid clustering with",
+      a(href = "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/kmeans.html", "kmeans()")
+    ),
+    p(
+      " - density clustering with",
+      a(href = "https://cran.r-project.org/web/packages/dbscan/index.html", "dbscan()")
+    ),
     h2("STEP 3 - Set-up parameters"),
     p("Choose parameters for choosen clustering methods:"),
-    p(" - hierarchical - ", a(href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/hclust.html","hclust()")),
-    p(" - - using ", a(href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/hclust.html","cutree()")," with h parameter	- numeric scalar or vector with heights where the tree should be cut"),
-    p(" - - using ", a(href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/hclust.html","cutree()")," with k parameter	- an integer scalar or vector with the desired number of groups"),
-    p(" - - using cutreeDynamic() (", a(href="https://cran.r-project.org/web/packages/dynamicTreeCut/index.html","dynamicTreeCut")," package) with 'hybrid' method"),
-    p(" - - using cutreeDynamic() (", a(href="https://cran.r-project.org/web/packages/dynamicTreeCut/index.html","dynamicTreeCut")," package) with 'tree' method"),
-    p(" - centroid - ", a(href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/kmeans.html","kmeans()")),
-    p(" - - using centers parameter	- either the number of clusters, say k, or a set of initial (distinct) cluster centres. If a number, a random set of (distinct) rows in x is chosen as the initial centres"),
-    p(" - density - ", a(href="https://cran.r-project.org/web/packages/dbscan/index.html","dbscan()")),
+    p(
+      " - hierarchical - ",
+      a(href = "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/hclust.html", "hclust()")
+    ),
+    p(
+      " - - using ",
+      a(href = "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/hclust.html", "cutree()"),
+      " with h parameter	- numeric scalar or vector with heights where the tree should be cut"
+    ),
+    p(
+      " - - using ",
+      a(href = "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/hclust.html", "cutree()"),
+      " with k parameter	- an integer scalar or vector with the desired number of groups"
+    ),
+    p(
+      " - - using cutreeDynamic() (",
+      a(href = "https://cran.r-project.org/web/packages/dynamicTreeCut/index.html", "dynamicTreeCut"),
+      " package) with 'hybrid' method"
+    ),
+    p(
+      " - - using cutreeDynamic() (",
+      a(href = "https://cran.r-project.org/web/packages/dynamicTreeCut/index.html", "dynamicTreeCut"),
+      " package) with 'tree' method"
+    ),
+    p(
+      " - centroid - ",
+      a(href = "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/kmeans.html", "kmeans()")
+    ),
+    p(
+      " - - using centers parameter	- either the number of clusters, say k, or a set of initial (distinct) cluster centres. If a number, a random set of (distinct) rows in x is chosen as the initial centres"
+    ),
+    p(
+      " - density - ",
+      a(href = "https://cran.r-project.org/web/packages/dbscan/index.html", "dbscan()")
+    ),
     p(" - - using eps parameter	- size of the epsilon neighborhood"),
-    p(" - - using minPts parameter	- number of minimum points in the eps region (for core points)."),
+    p(
+      " - - using minPts parameter	- number of minimum points in the eps region (for core points)."
+    ),
     h2("FINAL STEP - See the results"),
-    p("on plotting area You will see results. Each cluster is marekd with different color and shape"),
+    p(
+      "on plotting area You will see results. Each cluster is marekd with different color and shape"
+    ),
     p("points marked with black circle are not clustered)")
   )
 ))
