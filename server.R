@@ -1,6 +1,4 @@
 library(shiny)
-#library(mclust)
-#library(cluster)
 library(dynamicTreeCut)
 library(dbscan)
 library(ggplot2)
